@@ -1,0 +1,82 @@
+Basic layouts
+
+- Layout
+	.xml file
+
+-Java file
+
+-Static file (icons and stuff)
+	can be found in res --> mipmp
+
+
+To Know
+
+AndroidManifest.xml
+-General details about the project
+
+////////////////////////////////////////////////////////
+Gradle
+-Generates apk file 
+-Installs dependencies 
+-Handles combination of files and codes
+
+///////////////////////////////////////////////////////
+TODO
+// add this comment to remind user which parts of the project has not been completed
+
+
+///////////////////////////////
+Running the emulator
+1. Select device to run on
+2. Click run
+
+////////////////////////////////////////////////
+UI
+
+1.open activity_main.xml
+2. left panel allows you to drag and drop buttons and stuff
+3. Middle panel show you blueprint and design
+4. right panel shows you attributes of features you added
+	Focus on ID
+
+
+When in activity_main.xml
+You can toggle between design view and code view
+
+
+/////////////////////////////////////////////
+Constraints
+when contraints layout is chosen
+Creating a button will give a contraint error (button will be floating when emulator is ran)
+
+Solution: drag four edges of the button to top, left, right , and button to fix the position
+of the button
+
+/////////////////////////////////////////////
+Accessing attributes of an element
+
+TextView name = findViewById(R.id.<insert id of element>);
+
+/////////////////////////////////////////////
+Add onClick event listener to a Ui element
+1. go to .xml file
+2. paste event listener on last line of element
+	android:onClick="onBtnClick"
+
+3. Note that onBtnClick is a functionname
+4. Define function in MainActivity.java
+
+	EX:
+	public void  onBtnClick(View view){
+        TextView txt_Hello = findViewById(R.id.textMessage);
+        txt_Hello.setText("Hello");  //Sets the text to hello
+    }
+
+///////////////////////////////////////////////////
+Getting user Input
+
+.getText().toString();
+
+Always refer to name of element as the name of Object
+TextView
+EditText
