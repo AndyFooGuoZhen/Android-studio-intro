@@ -1,16 +1,3 @@
-UI
-
-1.open activity_main.xml
-2. left panel allows you to drag and drop buttons and stuff
-3. Middle panel show you blueprint and design
-4. right panel shows you attributes of features you added
-	Focus on ID
-
-
-When in activity_main.xml
-You can toggle between design view and code view
-
-///////////////////////////////////////////////////////////////////////
 Add onClick event listener to a Ui element
 1. go to .xml file
 2. paste event listener on last line of element
@@ -24,21 +11,8 @@ Add onClick event listener to a Ui element
         TextView txt_Hello = findViewById(R.id.textMessage);
         txt_Hello.setText("Hello");  //Sets the text to hello
     }
-
 /////////////////////////////////////////////////////////////////////////
-Constraints
-when contraints layout is chosen
-Creating a button will give a contraint error (button will be floating when emulator is ran)
 
-Solution: drag four edges of the button to top, left, right , and button to fix the position
-of the button
-
-/////////////////////////////////////////////////////////////////////////////
-Accessing attributes of an element
-
-TextView name = findViewById(R.id.<insert id of element>);
-
-/////////////////////////////////////////////////////////////////////////////
 UI , xml
 
 create tags just like html tags
@@ -50,14 +24,45 @@ use center vertical and center horizontal, set them to true
 To center element based on parent element
 use centerParent
 
-Increase font size
-textSize , use sp as unit
+//////////////////////////////////////////
+Toast
 
-To make another element appear below another element
-layout_below : add id of top element
-////////////////////////////////////////////////
+temporary message to be printed on emulator
+ Toast.makeText(this, "<message to be printed", Toast.LENGTH_SHORT).show();
 
+///////////////////////////////////////////////////
 
+Methods to create onClick listener
+1. add it in xml file
+2. Add it in .java ile
 
-/////////////////////////////////////////////
+EX:
+Button button2 = findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                
+            }
+        });
 
+3. implements View.onClickListener
+
+	@Override
+	public void onClick(View view){
+	switch(view.getId()){
+	
+	case R.id.button2:
+	//do something
+
+	default:
+	}
+
+////////////////////////////////////////////////////////////////////////
+EditText
+Receives input
+
+Defining th number of lines/ max no of lines as input
+android:lines="4"
+
+InputType
+date, email, blah blah

@@ -40,3 +40,9 @@ Getting user Input
 Always refer to name of element as the name of Object
 TextView
 EditText
+
+/////////////////////////////////////////
+Since sysout cant be used in android studio
+
+use Log.d("<Tag name>", "<message to print>");
+to print message (can be seen in Logcat)

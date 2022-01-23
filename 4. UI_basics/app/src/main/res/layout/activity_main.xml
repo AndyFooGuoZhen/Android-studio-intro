@@ -4,28 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="100dp">
 
    <TextView
+       android:id="@+id/txtWelcome"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="Hello World"
        android:layout_centerInParent="true"
+       android:text="Hello World"
+       android:textColor="#1dd12c"
        android:textSize="20sp"
        android:textStyle="bold"
-       android:textColor="#1dd12c"
-       android:id="@+id/txtWelcome"/>
+       />
+
+   <EditText
+       android:id="@+id/txtInput"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/txtWelcome"
+       android:layout_marginTop="10dp"
+       android:hint="Name"
+       android:inputType="numberPassword" />
+
+
+   <Button
+
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+      android:text="Say Hello"
+      android:layout_below="@+id/txtInput"
+      android:layout_centerHorizontal="true"
+      android:layout_marginTop="30dp"
+      android:background="@color/design_default_color_on_primary"
+       android:onClick="onHelloBtnCLicked"
+       android:id="@+id/helloBtn"/>
 
    <Button
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-      android:text="Say Hello"
-      android:layout_below="@+id/txtWelcome"
+      android:layout_below="@+id/helloBtn"
       android:layout_centerHorizontal="true"
-      android:layout_marginTop="30dp"
-      android:background="@color/design_default_color_on_primary"
-       android:onClick="onHelloBtnCLicked"/>
-
+      android:layout_marginTop="20dp"
+      android:text="Button 2"
+      android:id="@+id/button2"/>
 
     <!--Center stuff -->
     <!--       android:layout_centerHorizontal="true"-->
