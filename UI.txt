@@ -1,0 +1,63 @@
+UI
+
+1.open activity_main.xml
+2. left panel allows you to drag and drop buttons and stuff
+3. Middle panel show you blueprint and design
+4. right panel shows you attributes of features you added
+	Focus on ID
+
+
+When in activity_main.xml
+You can toggle between design view and code view
+
+///////////////////////////////////////////////////////////////////////
+Add onClick event listener to a Ui element
+1. go to .xml file
+2. paste event listener on last line of element
+	android:onClick="onBtnClick"
+
+3. Note that onBtnClick is a functionname
+4. Define function in MainActivity.java
+
+	EX:
+	public void  onBtnClick(View view){
+        TextView txt_Hello = findViewById(R.id.textMessage);
+        txt_Hello.setText("Hello");  //Sets the text to hello
+    }
+
+/////////////////////////////////////////////////////////////////////////
+Constraints
+when contraints layout is chosen
+Creating a button will give a contraint error (button will be floating when emulator is ran)
+
+Solution: drag four edges of the button to top, left, right , and button to fix the position
+of the button
+
+/////////////////////////////////////////////////////////////////////////////
+Accessing attributes of an element
+
+TextView name = findViewById(R.id.<insert id of element>);
+
+/////////////////////////////////////////////////////////////////////////////
+UI , xml
+
+create tags just like html tags
+
+
+To center stuff
+use center vertical and center horizontal, set them to true
+
+To center element based on parent element
+use centerParent
+
+Increase font size
+textSize , use sp as unit
+
+To make another element appear below another element
+layout_below : add id of top element
+////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////
+
