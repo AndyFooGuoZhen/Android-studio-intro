@@ -71,4 +71,37 @@ date, email, blah blah
 RelativeLayout
 
 can be used as a div to wrap other elements
-usefu for positioning
+useful for positioning
+every element's position is relative to another
+toright, toleft, below
+
+////////////////////////////////////////////////////////////////////
+Linear Layout
+Elements are placed line by line
+can't use center in parent
+
+add orientation variable to change it to vertical
+(something like flex-direction)
+
+layout weight : used for sizing proportions
+(something like flex) 
+
+/////////////////////////////////////////////////////////////////////
+Contrained layout
+Elements contrained by setting contraints
+Drag and drop elements via design view, hen drag 4 circles of an element
+
+Elements position move in accordance to the element they are contrained to / connected to
+
+Guideline
+Right click on design view and create a doted line
+Position the line however you want, and contraint other elements based on that line
+
+Match contraints at declared attributes
+You can make the width/height of an element match the element that is is constrained to
+
+/////////////////////////////////////////////////////////////////////
+Inserting images
+
+insert images at mipmap
+use ImageView tag , src to import image
