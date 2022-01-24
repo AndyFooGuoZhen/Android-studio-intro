@@ -66,3 +66,9 @@ android:lines="4"
 
 InputType
 date, email, blah blah
+
+///////////////////////////////////////////////////////////////////
+RelativeLayout
+
+can be used as a div to wrap other elements
+usefu for positioning

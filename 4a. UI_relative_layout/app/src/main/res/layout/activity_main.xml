@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/moviewLayout"
+        android:layout_centerHorizontal="true" >
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harry"
+        android:id="@+id/checkBoxHarry"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blabla"
+        android:layout_toRightOf="@+id/checkBoxHarry"
+        android:id="@+id/checkBoxBla"/>
+
+    <CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Woo"
+        android:layout_toRightOf="@+id/checkBoxBla"
+    android:id="@+id/checkBoxWoo"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/RadioGroupss">
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start"
+            android:id="@+id/startradio"/>
+
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/stopradio"/>
+    </RadioGroup>
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/progressb"
+        android:layout_below="@+id/RadioGroupss"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:progress="30"
+        android:max="100"
+        />
+
+
+
+
+</RelativeLayout>
