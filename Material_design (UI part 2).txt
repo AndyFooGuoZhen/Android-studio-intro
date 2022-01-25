@@ -1,0 +1,17 @@
+Material.io
+Guidelines for designing elements
+
+Graddle
+handles dependencies, combination of all file
+
+
+1. go to material.io, go to android section,sidebar, documentation, getting started,
+ copy dependecy link
+2. go to build.graddle (module), and paste dependency
+3. Go to res-->values-->themes-->rename parent="........" to Theme.MaterialComponents
+4. delete every <item> tag in the file
+
+
+Button example
+Go to activity.xml and create a button
+add style="MaterialComponents............" (Choose your styling)
