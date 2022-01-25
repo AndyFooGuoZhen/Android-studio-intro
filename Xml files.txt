@@ -1,0 +1,25 @@
+Strings.xml file
+res-->values-->strings.xml
+
+Useful for : defining a string here, getString(R.string.name of string) at MainActivity.java file
+		More tidier 
+
+/////////////////////////////////////////////
+colors.xml file
+res-->values-->colors.xml
+
+Useful for : defining your own color here using a defined name and color (hexColor)
+
+////////////////////////////////////////////
+AndroidManifest.xml
+General attributes about the app
+
+//////////////////////////////////////////
+Menu
+
+by default , go to res, right click res and create Directory
+NOTE: name the directory menu
+Then, go to menu, ad create a menu resource file, and name the menu with anyting
+
+
+

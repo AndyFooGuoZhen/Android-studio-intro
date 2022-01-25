@@ -105,3 +105,11 @@ Inserting images
 
 insert images at mipmap
 use ImageView tag , src to import image
+
+////////////////////////////////////////////
+Importing icons
+
+1. right click on drawabble
+2. new, image asset
+3. icon type, action type and bar icons
+4. search for icon at clip art, and change the name
