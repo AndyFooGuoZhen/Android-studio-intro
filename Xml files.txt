@@ -21,5 +21,21 @@ by default , go to res, right click res and create Directory
 NOTE: name the directory menu
 Then, go to menu, ad create a menu resource file, and name the menu with anyting
 
+//////////////////////////////////////////////
+Landscape mode
+
+Go to activity.xml
+we can add add landscape mode, a new .xml file will be created
+
+/////////////////////////////////////////////
+Include
+Making a new .xml file , layout or elements inside can be reused in other activities (modular)
+
+res-->layout-->right-click-->new-->layout resource file-->root element (relative layout)
+
+then go to activity.xml and write <include layout="<fileName>"
+we would need to overwrite the length and width of the include tag if the layout
+in activity.xml is constrained
+
 
 
