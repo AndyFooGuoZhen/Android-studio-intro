@@ -7,7 +7,7 @@ handles dependencies, combination of all file
 
 1. go to material.io, go to android section,sidebar, documentation, getting started,
  copy dependecy link
-2. go to build.graddle (module), and paste dependency
+2. go to build.graddle (module), and paste dependency, and sync it(lightbulb)
 3. Go to res-->values-->themes-->rename parent="........" to Theme.MaterialComponents
 4. delete every <item> tag in the file
 
@@ -15,3 +15,34 @@ handles dependencies, combination of all file
 Button example
 Go to activity.xml and create a button
 add style="MaterialComponents............" (Choose your styling)
+
+//////////////////////////////////////////////////
+FloatingButton
+
+Snackbar
+Something like toast, but has additional functionality
+
+Snackbar.make(parentLayout<layout>, "Message to show", Snackbar.length timing)
+	.setAction("Message of action", new View.OnCLickListener(){
+
+	//Add unimplemented methods here
+	});
+	.show();
+
+
+CardView
+A Card layout, may contain additional UI elements in it
+cardradius changes the curvature of the corners
+cardelevation gives it shadows
+
+
+///////////////////////////////////////////////////////
+RecyclerView (better more adapter version of list)
+Scrollable when more list items are added
+
+1. create recyclerview in activity.xml
+2. go to res --> layout--> new--> layout resource file---->and create new file (with relative layout)
+3. give a textview, give it an id, then set id for relativelayout and give it an id, 
+add padding to relative layout
+4. go to mainactivity folder, create recyleradapter .java file
+5. Details here: https://www.youtube.com/watch?v=__OMnFR-wZU

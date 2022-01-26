@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#964B00"
+    >
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#964B00"
+        android:elevation="1000dp"
+        android:text="bye" />
+
+
+    <Button
+        android:id="@+id/Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:elevation="50dp"
+        android:text="Button 1" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/Card"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/Btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="@color/design_default_color_primary_variant"
+        app:cardElevation="5dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:text="Hello"
+              android:textColor="#FFF"
+              android:id="@+id/hello">
+
+
+          </TextView>
+
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:src="@mipmap/ic_launcher"
+              android:layout_below="@+id/hello"
+              android:layout_centerHorizontal="true"
+              android:layout_marginTop="20dp"/>
+
+      </RelativeLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+</RelativeLayout>
