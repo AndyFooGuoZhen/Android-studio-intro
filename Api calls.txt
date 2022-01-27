@@ -65,3 +65,19 @@ PostApi apiClient = retrofit.create(PostApi.class);
 
             }
         });
+
+
+///////////////////////////////////////////////////////
+Api calls with seperate interface
+
+Video Link: https://www.youtube.com/watch?v=liDG8ZtHcGY
+Link: https://jsonplaceholder.typicode.com/photos
+
+Step 1: create a seperate class to hold our data 
+	EX: Photo.java
+	Getters and setter methods are here too
+
+Step 2: Create a seperate interface class
+	EX: PhotoApi 
+	It would be literally the same as PostApi, just seperated
+	
