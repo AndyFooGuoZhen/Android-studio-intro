@@ -1,0 +1,67 @@
+Making api calls
+
+Example website
+https://jsonplaceholder.typicode.com/posts/1
+
+Step 1: go to build.gradle
+	paste dependencies 	
+	
+    // Retrofit dependencies
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.0'
+
+Step 2: Go to manifest.xml, seek permission
+	paste this above <application>
+	<uses-permission android:name="android.permission.INTERNET"/>
+
+Step 3: Create new class post
+	with all object properties
+
+	EX: 
+	class Post{
+    		private int userId;
+   		 private int id;
+    		private String title;
+
+    		@SerializedName("body") //tell us precisely what we want from json file
+    		private String bigTexts;
+
+		//Setter and Getter methods here
+		}	
+
+Step 4: Create an apiClient
+	Paste this in onCreate
+
+	Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("https://jsonplaceholder.typicode.com/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+
+Step 5: create Post/Get api interface
+	paste this code above Post class
+
+interface PostApi{
+
+    @GET("/posts/1")
+    Call<Post> getFirstPost();
+}
+
+Step 6: Fetch data
+
+paste this in onCreate class
+
+PostApi apiClient = retrofit.create(PostApi.class);
+        apiClient.getFirstPost().enqueue(new Callback<Post>() {
+            @Override
+            public void onResponse(Call<Post> call, Response<Post> response) {
+                txtApi.setText(response.body().getBigTexts());
+		
+		//NOTE: to get title , or any other attributes use response.body().<getter method for title /attributes>
+		//Fetching data here
+            }
+
+            @Override
+            public void onFailure(Call<Post> call, Throwable t) {
+
+            }
+        });
