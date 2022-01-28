@@ -113,3 +113,12 @@ Importing icons
 2. new, image asset
 3. icon type, action type and bar icons
 4. search for icon at clip art, and change the name
+
+/////////////////////////////////
+Switching to second activity/page
+
+1. Create new empty activity
+	right click (at the place where we create new .java files) --> new --> empty activity
+
+2. follow instructions in link
+	https://www.youtube.com/watch?v=bgIUdb-7Rqo
