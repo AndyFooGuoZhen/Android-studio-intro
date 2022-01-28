@@ -1,0 +1,6 @@
+1. Install dependencies in gradle
+	 implementation 'com.android.volley:volley:1.2.1'
+
+2. Allow uses permission in manifest.xml
+	 <uses-permission android:name="android.permission.INTERNET"/>
+
