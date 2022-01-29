@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -45,29 +47,42 @@ public class MainActivity extends AppCompatActivity {
 
     public void jsonParse(){
         String url = "https://jsonplaceholder.typicode.com/posts";
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+
+        JsonArrayRequest request = new JsonArrayRequest(Request.Method.GET, url, null, new Response.Listener<JSONArray>() {
             @Override
-            public void onResponse(JSONObject response) {
+            public void onResponse(JSONArray response) {
+
                 try {
-                    JSONArray jsonArr = response.getJSONArray("");
+                    JSONArray jsonArr = new JSONArray(response.toString());
 
                     for(int i=0; i< jsonArr.length(); i++)
                     {
                         JSONObject contents = jsonArr.getJSONObject(i);
                         String userId = contents.getString("userId");
+//                        Toast.makeText(MainActivity.this, userId, Toast.LENGTH_SHORT).show();
                         txt.append(userId);
 
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
+//                    JSONArray jsonArr = new JSONArray(response.toString());
+
+//                    Toast.makeText(MainActivity.this, response.toString(), Toast.LENGTH_SHORT).show();
+
+
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                Toast.makeText(MainActivity.this, "failed", Toast.LENGTH_SHORT).show();
             }
         });
-    mQueue.add(request);
+
+        mQueue.add(request);
+
+
     }
 }
