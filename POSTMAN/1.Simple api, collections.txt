@@ -22,3 +22,15 @@ Shortening url links or to simplify our links
 1. paste link to get
 2. highlight the portion of the link , dont include slash at the end
 3. set as new variable, and rename the variable
+
+
+
+Video to setup volley
+https://www.youtube.com/watch?v=8F2Bjgpj5Ig
+
+Video to post to specific link to check
+https://www.youtube.com/watch?v=Z-p-l_5ZcJk
+
+
+//////////////////////////////////////////////
+POST using retrofit 
