@@ -1,5 +1,9 @@
 package com.example.post_springboot;
 
+import org.json.JSONObject;
+
+import java.util.UUID;
+
 import retrofit2.Call;
 import retrofit2.http.Body;
 
@@ -9,7 +13,8 @@ import retrofit2.http.POST;
 
 public interface ApiInterface {
 
-    @FormUrlEncoded
+//    @FormUrlEncoded
     @POST("/api/v1/person")
-    Call<Person> getUserInformation(@Field("name") String name);
+    Call<Person> getUserInformation(@Body Person person);
+//    Call<Person> getUserInformation(@Body Person person);
 }

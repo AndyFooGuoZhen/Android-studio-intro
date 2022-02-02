@@ -1,10 +1,14 @@
 package com.example.post_springboot;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import java.util.UUID;
+
 public class Person {
 
-     String name;
+    private String name;
 
-    public Person(String name) {
+    public Person(@JsonProperty("name") String name) {
         this.name = name;
     }
 
@@ -15,4 +19,6 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }
