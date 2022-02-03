@@ -1,3 +1,9 @@
 //NOTE: if using local host as server on android studio
 
 replace http://localhost8080 with  http://10.0.2.2:8080/
+
+
+TAKEAWAY
+
+Use @Body Class instanceName to post an Object to springboot
+use @JSONProperty at Pojo class to indicate the variable will be converted to JSON
